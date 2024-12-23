@@ -1,0 +1,315 @@
+@import url("https://fonts.googleapis.com/css?family=MuseoModerno:700|MuseoModerno:400");
+:root {
+  --text: #06190e;
+  --background: #ffffff;
+  --primary: #4ade80;
+  --secondary: #bbf7d0;
+  --accent: #6a73dc;
+  --body: 1024px;
+}
+/* :root[data-theme="dark"] {
+  --text: #e6f9ee;
+  --background: #000000;
+  --primary: #21b557;
+  --secondary: #08441d;
+  --accent: #232c95;
+} */
+body {
+  box-sizing: border-box;
+  font-family: "MuseoModerno";
+  font-weight: 400;
+  background-color: var(--background);
+  margin: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "MuseoModerno";
+  font-weight: 700;
+}
+
+html {
+  font-size: 100%;
+} /* 16px */
+
+h1 {
+  font-size: 4.21rem; /* 67.36px */
+}
+
+h2 {
+  font-size: 3.158rem; /* 50.56px */
+}
+
+h3 {
+  font-size: 2.369rem; /* 37.92px */
+}
+
+h4 {
+  font-size: 1.777rem; /* 28.48px */
+}
+
+h5 {
+  font-size: 1.333rem; /* 21.28px */
+}
+
+small {
+  font-size: 0.75rem; /* 12px */
+}
+
+/*Button default utility */
+button {
+  border: none;
+  background-color: transparent;
+  outline: none;
+  background-color: var(--primary);
+  border-radius: 0.75rem;
+  width: 100%;
+  color: var(--background);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.35s ease-in-out;
+}
+
+/***********Hover state *************/
+/*Hover state for the button */
+button:hover {
+  background-color: var(--background);
+  outline: 1px solid var(--accent);
+  color: var(--text);
+}
+
+/*link hover state */
+li a:hover,
+a:hover {
+  color: var(--accent);
+}
+
+/*header */
+header {
+  padding: 1rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+header ul {
+  text-decoration: none;
+  display: flex;
+  gap: 4rem;
+}
+header ul li a {
+  text-decoration: none;
+  color: var(--text);
+}
+li {
+  list-style: none;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+/*Game view*/
+.card__view {
+  height: calc(70vh - 120px);
+  width: 100%;
+  background-color: var(--secondary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main__card {
+  margin-top: 7rem;
+  z-index: 2;
+  background-color: var(--background);
+  display: flex;
+  gap: 5rem;
+  padding: 2rem;
+  max-width: 1240px;
+  align-items: center;
+  border-radius: 0.75rem;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.display-game {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  flex: 1;
+}
+.card__view-details {
+  flex: 1;
+}
+
+.card__view-details__wrapper {
+  padding: 2rem;
+}
+.display-game p {
+  font-size: x-small;
+  font-weight: 500;
+  margin: 0;
+}
+.main__card img {
+  height: 100%;
+  width: 100%;
+  aspect-ratio: 16/9;
+  border-radius: 0.75rem;
+}
+.card__view-sliders {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.card__view-sliders img {
+  height: 100%;
+  width: 90px;
+}
+
+.card__view-details__button {
+  padding: 1rem 2rem;
+}
+/* Game description */
+
+.game__description {
+  display: flex;
+  justify-content: center;
+  margin-top: 4rem;
+}
+
+.game__description-wrapper {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  max-width: var(--body);
+  border-radius: 0.5rem;
+}
+
+.game__description-text {
+  flex: 1;
+}
+
+.game__description-text p:first-child {
+  color: var(--accent);
+  font-size: large;
+}
+.game__description-button {
+  padding: 1rem 3rem;
+  width: auto;
+}
+.game__description-image {
+  flex: 1;
+}
+
+.game__description img {
+  width: 100%;
+  border-radius: 0.75rem;
+}
+
+/* Play Modes */
+.play__modes {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+.play__modes-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  max-height: 11rem;
+  max-width: var(--body);
+}
+.play__modes-rating-cards,
+.play__modes-supported {
+  text-align: center;
+  height: 100%;
+  flex: 1;
+  background-color: var(--secondary);
+  border-radius: 12px;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.play__modes-rating-cards h5,
+.play__modes-supported h5 {
+  padding: 0;
+  margin: 0;
+}
+.play__modes-rating-cards-wrapper {
+  width: 80%;
+  padding: 1rem 2rem;
+  background-color: var(--accent);
+  color: var(--background);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-radius: 12px;
+}
+.play__modes-rating-cards-wrapper p {
+  padding: 0;
+  margin: 0;
+  font-size: small;
+}
+.play__modes-rating-cards__details {
+  display: flex;
+  padding: 1rem 0;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+}
+.supported-card p {
+  margin: 0;
+}
+.supported-icon {
+  background-color: var(--accent);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+}
+.supported-icon svg g,
+.supported-icon svg path {
+  fill: white;
+}
+/* More information about the game */
+.game__info {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.game__info-details {
+  max-width: var(--body);
+  display: grid;
+  grid-template-columns: 4fr 8fr;
+  width: 100%;
+
+}
+.game__info-values {
+  width: 100%;
+}
+.game__info-title, .game__info-values{
+    border-top: 1px solid rgba(0, 0, 0, .2);
+    padding: 1rem;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+/* learn more section of the game */
+.game__learn-more {
+}
+
+/* related or more games */
+.related-games {
+}
+
+/* A warning message */
+.warning-message {
+}
+
+/*Footer section*/
+
+footer {
+}
